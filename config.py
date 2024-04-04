@@ -1,3 +1,8 @@
+#(©)CodeXBotz
+
+
+
+
 import os
 import logging
 from logging.handlers import RotatingFileHandler
@@ -5,29 +10,29 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6622365170:AAGLX5OC9Cxa6srCwj6Qlvx4taAs_rE73MY")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7152029939:AAHDJAdOcyknY0mB0GCtGDQM7nb4YjvgZK8")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "11384701"))
+APP_ID = int(os.environ.get("APP_ID", "29868868"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "871604268efcb07c3c0a0d981a4d60eb")
+API_HASH = os.environ.get("API_HASH", "6b7bd10846ff6d7e8f50a4bfe13c9fd4")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001644326829"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002123688300"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "786843013"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5884953489"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://pvssivananda:0KWUZLzmRKC2zTBF@cluster0.gaxfh44.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "MBCFILES")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001968308293"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -35,19 +40,19 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "1408595569 5364988276").split()):
+    for x in (os.environ.get("ADMINS", "786843013 1408595569 5364988276 1245165402").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>you need to join POCKET FM TELUGU BACKUP to get files\n\nKindly Please join Channel</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 
 #set True if you want to prevent users from forwarding files from bot
-PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
+PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
@@ -58,7 +63,7 @@ USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
 
-LOG_FILE_NAME = "PPCFLink_bot.txt"
+LOG_FILE_NAME = "filesharingbot.txt"
 
 logging.basicConfig(
     level=logging.INFO,
